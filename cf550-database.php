@@ -5,7 +5,7 @@
 register_activation_hook( __FILE__, 'cf_db_install' );
 add_action( 'plugins_loaded', 'cf_db_install' );
 global $cf_db_version;
-$cf_db_version = '1.4.1';
+$cf_db_version = '1.5.0';
 
 function cf_db_install() {
 	global $wpdb;
@@ -68,12 +68,31 @@ function cf_db_install() {
 			PRIMARY KEY (id)
 		) $charset_collate;";
 
+		$cf_programtime = "CREATE TABLE ".$wpdb->prefix . "cf_programtime (
+			id int(9) NOT NULL AUTO_INCREMENT,
+			sunday boolean DEFAULT 0 NOT NULL,
+			monday boolean DEFAULT 0 NOT NULL,
+			tuesday boolean DEFAULT 0 NOT NULL,
+			wednesday boolean DEFAULT 0 NOT NULL,
+			thursday boolean DEFAULT 0 NOT NULL,
+			friday boolean DEFAULT 0 NOT NULL,
+			saturday boolean DEFAULT 0 NOT NULL,
+			begin_time time DEFAULT '00:00:00' NOT NULL,
+			end_time time DEFAULT '23:59:59' NOT NULL,
+			is_public boolean DEFAULT 0 NOT NULL,
+			begin_date date DEFAULT '2000-01-01' NOT NULL,
+			end_date date DEFAULT '2999-12-31' NOT NULL,
+			description text,
+			PRIMARY KEY (id)
+		) $charset_collate;";
+
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $cf_programs );
 		dbDelta( $cf_attendance );
 		dbDelta( $cf_members );
 		dbDelta( $cf_subscription );
 		dbDelta( $cf_purchase );
+		dbDelta( $cf_programtime );
 
 		update_option( 'cf_db_version', $cf_db_version );
 	}

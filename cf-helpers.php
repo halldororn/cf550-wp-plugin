@@ -6,6 +6,7 @@ function cf_write_header($active) {
             echo '<li '.($active=="dashboard" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_dashboard">Crossfit550</a></li>';
             echo '<li '.($active=="members" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_members">Iðkendur</a></li>';
             echo '<li '.($active=="programs" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_programs">Æfingar</a></li>';
+            echo '<li '.($active=="programtime" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_programtime">Æfingatímar</a></li>';
             echo '<li '.($active=="attendance" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_attendance">Mætingar</a></li>';
             echo '<li '.($active=="subscription" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_subscription">Kort</a></li>';
             echo '<li '.($active=="purchase" ? 'class="active"' : "" ).'><a href="'.CF550_ADMIN_URL.'cf550_purchase">Kaup</a></li>';
