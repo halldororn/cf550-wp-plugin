@@ -1,0 +1,60 @@
+.program-input {
+    width: 95%;
+    margin: 3px;
+    border-radius: 5px;
+}
+h2, h4 {
+    text-align: center;
+}
+.error {
+    color: red;
+    text-align: center;
+}
+.cf-program {
+    margin-top: 5px;
+}
+.cf-program p {
+    margin:5px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover
+{
+    background-color:#e5e5e5
+}
+.form_add {
+    text-align: center;
+    padding: 10px;
+    border: 2px dotted #582a31;
+}
+form input 
+{
+    display: inline; 
+    margin-right: 10px;
+}
+.cf-table {
+    margin-top: 10px;
+}
+.cf-table th {
+    background-color: #582a31;
+    color: white;
+}
+.cf-input-div {
+    margin:20px;
+}
+
+.cf-input-div input[type=checkbox] {
+    margin: 0px 0px 5px 5px;
+}
+
+#summary h4 {
+    text-align: left;
+}
