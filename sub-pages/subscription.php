@@ -173,7 +173,7 @@ function render_subscription_card($id, $error = "") {
                 <input type="text" name="subscription_value" id="subscription_value" value="<?php echo htmlspecialchars($subscription->value); ?>">
             </div>
             <div class="cf-input-div">
-                <label for="subscription_not_crossfit">Crossfit</label>
+                <label for="subscription_crossfit">Crossfit</label>
                 <input type="checkbox" name="subscription_crossfit" id="subscription_crossfit" <?php echo ($subscription->crossfit == 1 ?  'checked':'') ?>>
             </div>
             <input class="btn btn-default" type="submit" name="update-subscription" value="Staðfesta">

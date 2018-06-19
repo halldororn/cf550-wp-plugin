@@ -5,7 +5,7 @@
 register_activation_hook( __FILE__, 'cf_db_install' );
 add_action( 'plugins_loaded', 'cf_db_install' );
 global $cf_db_version;
-$cf_db_version = '1.5.0';
+$cf_db_version = '1.5.1';
 
 function cf_db_install() {
 	global $wpdb;
@@ -77,11 +77,11 @@ function cf_db_install() {
 			thursday boolean DEFAULT 0 NOT NULL,
 			friday boolean DEFAULT 0 NOT NULL,
 			saturday boolean DEFAULT 0 NOT NULL,
-			begin_time time DEFAULT '00:00:00' NOT NULL,
-			end_time time DEFAULT '23:59:59' NOT NULL,
+			begin_time time,
+			end_time time,
 			is_public boolean DEFAULT 0 NOT NULL,
-			begin_date date DEFAULT '2000-01-01' NOT NULL,
-			end_date date DEFAULT '2999-12-31' NOT NULL,
+			begin_date date,
+			end_date date,
 			description text,
 			PRIMARY KEY (id)
 		) $charset_collate;";

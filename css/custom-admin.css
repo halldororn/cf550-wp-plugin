@@ -40,6 +40,9 @@ form input
     display: inline; 
     margin-right: 10px;
 }
+form input[type='checkbox'] {
+    margin: 0 2px 0 0;
+}
 .cf-table {
     margin-top: 10px;
 }

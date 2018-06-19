@@ -137,7 +137,7 @@ function render_program_card($program_id, $error = "") {
                 if($error != "default-error") {
                     echo '<h3 class="error">'.htmlspecialchars($error).'</h3>';
                 } else {
-                    echo '<h3 class="error">Eitthvað fór úrskeiðis, ekki tókst að uppfæra iðkanda</h3>';
+                    echo '<h3 class="error">Eitthvað fór úrskeiðis, ekki tókst að uppfæra æfingu</h3>';
                 }
             }
         ?>
