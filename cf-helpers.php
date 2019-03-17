@@ -143,7 +143,7 @@ function get_remainder_for_member_purchase($member) {
             return $expires;
         case 'count':
             $result = $wpdb->get_row("SELECT COUNT(*) AS count FROM ".$wpdb->prefix."cf_attendance a LEFT JOIN ".$wpdb->prefix."cf_programs p ON a.program_id=p.id WHERE a.member_ssn = '".$member->ssn."' AND p.date >= '".$member->p_date."'");
-            return '('+$member->s_value-$result->count+') skipti';
+            return '('.($member->s_value - $result->count).') skipti';
     }
     return false;
 }
